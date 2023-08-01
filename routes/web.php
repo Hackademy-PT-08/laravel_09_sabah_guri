@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\ArticleController;
 
 /*
@@ -18,3 +19,6 @@ use App\Http\Controllers\ArticleController;
 Route::get('/',[HomeController::class,'homepage'])->name('homepage');
 Route::get('/articoli/aggiungi',[ArticleController::class,'create'])->name('aggiungi');
 Route::post('/articoli/aggiungi',[ArticleController::class,'store'])->name('post-articolo');
+Route::get('/profilo',[UserController::class,'showProfile'])
+->name('profilo')
+->middleware(['auth','verified']);

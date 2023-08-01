@@ -20,8 +20,8 @@ class ArticleController extends Controller
         $imageId=uniqid();
         
         $article=new Article;
-        $article->title=$request->old('titolo');
-        $article->content=$request->old('contenuto');
+        $article->title=$request->titolo;
+        $article->content=$request->contenuto;
         $article->image_id=$imageId;
         $article->image='image-article-'. $imageId .'.'. $request->file('immagine')->extension();
         $article->save();

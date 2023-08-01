@@ -24,16 +24,16 @@ class StoreArticleRequest extends FormRequest
         return [
             'titolo'=>'required',
             'contenuto'=>'required',
-            'immagine'=>'required'
+            
             
         ];
     }
 
     public function messages(){
         return [
-            'titolo.required'=>'devi inserire il titolo',
-            'contenuto.required'=>'devi inserire una descrizione',
-            'immagine.required'=>'devi inserire un immaggine'
+            'titolo.required'=>'Devi inserire il titolo ',
+            'contenuto.required'=>'Devi inserire una descrizione ',
+            
         ];
 
     }
