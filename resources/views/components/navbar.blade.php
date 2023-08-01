@@ -24,6 +24,9 @@
               <a class="nav-link" href="{{route('profilo')}}">Profilo</a>
             </li> 
             <li class="nav-item">
+              <a class="nav-link" href="{{route('articles-index')}}">I nostri prodotti</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link" href="{{route('aggiungi')}}">Aggiungi un nuovo articolo</a>
             </li>
             {{-- bottone di log out --}}

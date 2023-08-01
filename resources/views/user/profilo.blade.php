@@ -1,5 +1,9 @@
 <x-layout>
     <h1 class="h1">Profilo utente</h1>
+
+    <h2 class="h2">{{$users->name}} </h2>
+
+
     @if ($errors->any())
         <div class="alert alert-danger">
             <ul>
@@ -14,7 +18,7 @@
         <h2 class="h4">Aggiorna informazioni utente</h2>
         @csrf
         @method('PUT')
-        <input class="form-control-sm" type="text" name="name" placeholder="Nome" >
+        <input class="form-control-sm" type="text" name="name" placeholder="Nome Cognome">
         <input class="form-control-sm" type="email" name="email" placeholder="Email" >
         <input class="btn btn-sm btn-secondary" type="submit" value="Aggiorna">
 

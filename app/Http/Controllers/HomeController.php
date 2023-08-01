@@ -10,6 +10,6 @@ class HomeController extends Controller
     public function homepage() {
         $getAllArticles=Article::all();
 
-        return view('welcome',['articles'=>$getAllArticles]);
+        return view('home.welcome',['articles'=>$getAllArticles]);
     }
 }
